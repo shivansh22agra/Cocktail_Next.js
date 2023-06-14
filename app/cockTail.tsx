@@ -13,7 +13,7 @@ export default function Cocktail({
   return (
     <div>
       <h1>{strDrink}</h1>
-      <img src={strDrinkThumb + ""} alt="" width={100}></img>
+      <img src={strDrinkThumb + ""} alt="" width={150}></img>
       <Link href={`/asd`}></Link>
     </div>
   );

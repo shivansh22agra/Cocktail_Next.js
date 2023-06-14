@@ -8,15 +8,20 @@ export default async function Home() {
   );
   const data = await response.json();
   return (
-    <main className="font-poppins">
-      <div className="text-xl">
+    <main className="font-poppins mx-10">
+      <div className="grid gap-10 grid-cols-fluid">
         {data.drinks.map(function (item: {
           strDrink: String;
           strDrinkThumb: String;
           idDrink: String;
         }) {
-          return <Cocktail strDrink={item.strDrink} strDrinkThumb={item.strDrinkThumb}
-          idDrink={item.idDrink}/>
+          return (
+            <Cocktail
+              strDrink={item.strDrink}
+              strDrinkThumb={item.strDrinkThumb}
+              idDrink={item.idDrink}
+            />
+          );
         })}
       </div>
     </main>
